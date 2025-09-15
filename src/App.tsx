@@ -139,7 +139,7 @@ export default function App() {
               </div>
               <div style={{ marginBottom: "16px" }}>
                 <input
-                  placeholder="18a10b21377d7843c794aef8282ef64c0eae2c7aafea2088ecb4d7c1d0faf257 (your Nostr public key in hex format)"
+                  placeholder="HEX nostr public key, like 18a10b21377d7843c794aef8282ef64c0eae2c7aafea2088ecb4d7c1d0faf257 (your Nostr public key in hex format)"
                   value={hexKey}
                   onChange={(e) => setHexKey(e.target.value)}
                   style={{
