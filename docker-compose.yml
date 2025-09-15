@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  oauthclient:
+    logging:
+      options:
+        max-size: "5k"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    network_mode: "host"
+    volumes:
+      - type: bind
+        source: .
+        target: /workspace
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "3008"]
+    working_dir: /workspace
