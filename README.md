@@ -2,6 +2,27 @@
 
 A React + TypeScript demonstration of integrating with Rizful's OAuth-like flow to obtain Nostr Wallet Connect (NWC) URIs and Lightning addresses.
 
+## Assumptions
+
+Some existing wallet services (coinos, others) identify users by nostr public/private keys, and allow signup without an email address or other means for the user to recover their funds.
+
+Our view is that this is totally dangerous for normies, who:
+
+1. Will likely reveal their nsec to lots of sketchy apps
+2. Will likely misplace their nsec
+3. Will forget where their sats are actually stored, and have no record of it in their email or elsewhere.
+
+In all these cases, their funds will disappear.
+
+Rizful's approach is more conservative:
+
+1. We think that a user's funds should NOT be connected to their nsec.
+2. We allow "burner" emails and VPNs, but DO require email/password login, with optional 2FA.
+
+Since the user has an email in their inbox from Rizful, a user should never lose access to his/her funds, as their password can be reset by email.
+
+It's not 100% cyberpunk, but it's practical and the right way to onboard normies to zaps (in our opinion.)
+
 ## Overview
 
 This demo application showcases how to integrate with Rizful's authentication system to securely obtain credentials. It demonstrates a three-step process that external applications can implement to enable their users to connect their Rizful vault.
