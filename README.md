@@ -114,7 +114,7 @@ src/
 
 ### Token Exchange Endpoint
 
-**POST** `/nostr_onboarding_auth_token/post_for_secrets`
+**POST** `rizful.com/nostr_onboarding_auth_token/post_for_secrets`
 
 **Request:**
 
@@ -131,26 +131,9 @@ src/
 {
   "nwc_uri": "nostr+walletconnect://...",
   "lightning_address": "user@rizful.com",
-  "nostr_public_key": "confirmed-hex-public-key"
+  "nostr_public_key": "64-character-hex-public-key"
 }
 ```
-
-### Error Handling
-
-The application includes comprehensive error handling:
-
-- **Network errors**: Connection issues with Rizful servers
-- **Validation errors**: Invalid codes or public keys
-- **API errors**: Server-side authentication failures
-- **Timeout errors**: Expired or used codes
-
-## Security Considerations
-
-- **No Private Keys**: Users never share private keys with the demo app
-- **Time-Limited Codes**: Authorization codes expire for security
-- **Single-Use Tokens**: Each code can only be used once
-- **HTTPS Only**: All communication encrypted in production
-- **CORS Handling**: Proper cross-origin request handling
 
 ## Browser Compatibility
 
