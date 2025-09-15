@@ -2,6 +2,8 @@
 
 A React + TypeScript demonstration of integrating with Rizful's OAuth-like flow to obtain Nostr Wallet Connect (NWC) URIs and Lightning addresses.
 
+![Demo of Rizful Integration](./images/demo-image.png)
+
 ## Assumptions
 
 Some existing wallet services (coinos, others) identify users by nostr public/private keys, and allow signup without an email address or other means for the user to recover their funds.
