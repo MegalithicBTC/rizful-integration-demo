@@ -4,6 +4,16 @@ A React + TypeScript demonstration of integrating with Rizful's OAuth-like flow 
 
 ![Demo of Rizful Integration](./images/demo-image.png)
 
+# What does the Nostr application get out of this in the end?
+
+You can see the "get secrets" button at the bottom of the screenshot. (You can rename the buttons in your application, of course.) When the user clicks "get secrets", if the authorization is successful, you will see an NWC code and a Lightning Address written to the screen. (Look for `<strong>NWC URI:</strong>` in the code.)
+
+For this demo, the NWC code and Lightning Address are written to the screen, but in YOUR application, you should
+
+1. Save the NWC code so the user can use it to make Lightning payments.. remember a NWC code is sensitive, never write this to your server unless you are really sure you can do it securely.. ideally it never leaves the user's device!
+2. Apply the Lightning Address to the user's profile (LUD), and sync that with Nostr relays as the user's metadata
+3. Use the Lightning Address also as the Nip-05 for the user's profile, and sync that with Nostr relays as the user's metadata
+
 ## Assumptions
 
 Some existing wallet services (coinos, others) identify users by nostr public/private keys, and allow signup without an email address or other means for the user to recover their funds.
