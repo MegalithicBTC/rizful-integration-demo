@@ -17,7 +17,7 @@ For this demo, the NWC code and Lightning Address are written to the screen, but
 
 ## Assumptions
 
-Some existing wallet services (coinos, others) identify users by nostr public/private keys, and allow signup without an email address or other means for the user to recover their funds.
+Some existing wallet services identify users by nostr public/private keys, and allow signup without an email address or other means for the user to recover their funds.
 
 Our view is that this is totally dangerous for normies, who:
 
@@ -88,14 +88,6 @@ User → Rizful (Get Code) → Demo App (Exchange) → Rizful API → Credential
 
 You can configure the application to use a custom Rizful instance by setting the `VITE_RIZFUL_ORIGIN` environment variable.
 
-#### Using .env File
-
-Create a `.env` file in the project root:
-
-```env
-VITE_RIZFUL_ORIGIN=https://rizful.com
-```
-
 ## Getting Started
 
 ### Prerequisites
@@ -115,10 +107,11 @@ VITE_RIZFUL_ORIGIN=https://rizful.com
 
 2. **Configure Rizful URL:**
 
-   ```bash
-   # Create .env.local file with your custom Rizful instance
-   echo "VITE_RIZFUL_ORIGIN=https://rizful.com" > .env.local
-   ```
+Create a `.env` file in the project root:
+
+```env
+VITE_RIZFUL_ORIGIN=https://rizful.com
+```
 
 3. **Start development server:**
 
