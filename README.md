@@ -75,19 +75,13 @@ The application implements a three-step authentication flow:
 ### Technical Flow
 
 ```
-User → Rizful (Get Code) → Demo App (Exchange) → Rizful API → Credentials
+User → Sign up for Rizful  → Get Code From Rizful → Exchange code for Credentials
 ```
 
 1. **GET** `https://rizful.com/nostr_onboarding_auth_token/get_token` - Get authorization code
 2. **POST** `https://rizful.com/nostr_onboarding_auth_token/post_for_secrets` - Exchange for credentials
 
 ## Configuration
-
-### Custom Rizful URL
-
-You can configure the application to use a custom Rizful instance by setting the `VITE_RIZFUL_ORIGIN` environment variable.
-
-## Getting Started
 
 ### Prerequisites
 
