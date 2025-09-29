@@ -122,21 +122,6 @@ VITE_RIZFUL_ORIGIN=https://rizful.com
 4. **Open in browser:**
    Navigate to `http://localhost:3008`
 
-## Project Structure
-
-```
-src/
-├── App.tsx              # Main application component
-├── App.css              # Application styles
-├── main.tsx             # React entry point
-├── index.css            # Global styles
-└── utils/
-    └── utils.ts         # Utility functions
-        ├── openPopup()     # Popup window management
-        ├── isValidHex()    # Hex validation
-        └── getRizfulOrigin() # Environment config
-```
-
 ## API Integration
 
 ### Token Exchange Endpoint
@@ -166,7 +151,5 @@ src/
 
 ```bash
 npm run dev      # Start development server with hot reload
-npm run build    # Build for production
-npm run preview  # Preview production build locally
-npm run lint     # Run ESLint for code quality
+
 ```
