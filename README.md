@@ -116,7 +116,7 @@ VITE_RIZFUL_ORIGIN=https://your-custom-rizful-instance.com
 
    ```bash
    # Create .env.local file with your custom Rizful instance
-   echo "VITE_RIZFUL_ORIGIN=https://your-rizful-instance.com" > .env.local
+   echo "VITE_RIZFUL_ORIGIN=https://rizful.com" > .env.local
    ```
 
 3. **Start development server:**
