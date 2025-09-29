@@ -3,6 +3,7 @@
 A React + TypeScript demonstration of integrating with Rizful's OAuth-like flow to obtain Nostr Wallet Connect (NWC) URIs and Lightning addresses.
 
 ![Demo of Rizful Integration](./images/demo-image.png)
+![One time code from server](./images/get-one-time-code.png)
 
 # What does the Nostr application get out of this in the end?
 
