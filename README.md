@@ -45,7 +45,6 @@ This demo application showcases how to integrate with Rizful's authentication sy
 - **Secure Authentication Flow**: OAuth-like process without exposing private keys
 - **NWC URI Generation**: Get Nostr Wallet Connect URI
 - **Lightning Address Retrieval**: Obtain Lightning address for receiving payments
-- **Responsive Design**: Works on desktop and mobile devices
 
 ## Workflow
 
