@@ -7,13 +7,13 @@ A React + TypeScript demonstration of integrating with Rizful's OAuth-like flow 
 
 # What does the Nostr application get out of this in the end?
 
-You can see the "get secrets" button at the bottom of the screenshot. (You can rename the buttons in your application, of course.) When the user clicks "get secrets", if the authorization is successful, you will see an NWC code and a Lightning Address written to the screen. (Look for `<strong>NWC URI:</strong>` in the code.)
+You can see the green "get code" button. (You can rename the buttons in your application, of course.) When the user clicks "get code", if the authorization is successful, you will see an NWC code and a Lightning Address written to the screen. (Look for `<strong>NWC URI:</strong>` in the code.)
 
 For this demo, the NWC code and Lightning Address are written to the screen, but in YOUR application, you should
 
 1. Save the NWC code so the user can use it to make Lightning payments.. remember a NWC code is sensitive, never write this to your server unless you are really sure you can do it securely.. ideally it never leaves the user's device!
-2. Apply the Lightning Address to the user's profile (LUD), and sync that with Nostr relays as the user's metadata
-3. Use the Lightning Address also as the Nip-05 for the user's profile, and sync that with Nostr relays as the user's metadata
+2. Apply the Lightning Address to the user's profile (LUD), and sync that with Nostr relays as the user's metadata.
+3. Use the Lightning Address also as the Nip-05 for the user's profile, and sync that with Nostr relays as the user's metadata. (If you want.)
 
 ## Assumptions
 
@@ -93,7 +93,7 @@ You can configure the application to use a custom Rizful instance by setting the
 Create a `.env` file in the project root:
 
 ```env
-VITE_RIZFUL_ORIGIN=https://your-custom-rizful-instance.com
+VITE_RIZFUL_ORIGIN=https://rizful.com
 ```
 
 ## Getting Started
@@ -113,7 +113,7 @@ VITE_RIZFUL_ORIGIN=https://your-custom-rizful-instance.com
    npm install
    ```
 
-2. **Configure Rizful URL (optional):**
+2. **Configure Rizful URL:**
 
    ```bash
    # Create .env.local file with your custom Rizful instance
@@ -169,12 +169,6 @@ src/
 }
 ```
 
-## Browser Compatibility
-
-- **Modern Browsers**: Chrome 90+, Firefox 88+, Safari 14+, Edge 90+
-- **Mobile Support**: iOS Safari, Chrome Mobile, Firefox Mobile
-- **Features Used**: ES2020+, Fetch API, CSS Grid, Flexbox
-
 ## Development Scripts
 
 ```bash
@@ -183,13 +177,3 @@ npm run build    # Build for production
 npm run preview  # Preview production build locally
 npm run lint     # Run ESLint for code quality
 ```
-
-## Environment Variables
-
-| Variable             | Description              | Default              | Example                      |
-| -------------------- | ------------------------ | -------------------- | ---------------------------- |
-| `VITE_RIZFUL_ORIGIN` | Custom Rizful server URL | `https://rizful.com` | `https://staging.rizful.com` |
-
-## License
-
-This project is provided as a demonstration and reference implementation.
